@@ -1,28 +1,15 @@
 # Counter
 
-## Description
-
-Given an integer `n`, the counter function returns a closure that initially returns `n`, and then returns `1` more than the previous value every subsequent time it is called.
-
-## Examples
+Given an integer `n`, return a `counter` function. This `counter` function initially returns `n` and then returns 1 more than the previous value every subsequent time it is called (`n`, `n + 1`, `n + 2`, etc).
 
 ### Example 1:
 
+```javascript
 Input:
-
-```javascript
-n = (10)[("call", "call", "call")];
-```
-
-Output:
-
-```javascript
-[10, 11, 12];
-```
-
+n = 10
+["call","call","call"]
+Output: [10,11,12]
 Explanation:
-
-```javascript
 counter() = 10 // The first time counter() is called, it returns n.
 counter() = 11 // Returns 1 more than the previous time.
 counter() = 12 // Returns 1 more than the previous time.
@@ -30,32 +17,18 @@ counter() = 12 // Returns 1 more than the previous time.
 
 ### Example 2:
 
+```javascript
 Input:
-
-```javascript
-n = -(2)[("call", "call", "call", "call", "call")];
-```
-
-Output:
-
-```javascript
-[-2, -1, 0, 1, 2];
-```
-
-Explanation:
-
-```javascript
-counter() = -2 // The first time counter() is called, it returns n.
-counter() = -1 // Returns 1 more than the previous time.
-counter() = 0  // Returns 1 more than the previous time.
-counter() = 1  // Returns 1 more than the previous time.
-counter() = 2  // Returns 1 more than the previous time.
+n = -2
+["call","call","call","call","call"]
+Output: [-2,-1,0,1,2]
+Explanation: counter() initially returns -2. Then increases after each sebsequent call.
 ```
 
 ## Constraints
 
-- `n` is an integer in the range from -1000 to 1000.
-- At most 1000 calls to the counter function will be made.
+- `-1000 <= n <= 1000`.
+- `At most 1000 calls to counter() will be made`.
 
 ## Hint
 
