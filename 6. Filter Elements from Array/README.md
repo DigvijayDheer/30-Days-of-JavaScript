@@ -45,6 +45,12 @@ Falsey values such as 0 should be filtered out
 - `0 <= arr.length <= 1000`
 - `-10^9 <= arr[i] <= 10^9`
 
+### Hint:
+
+1. Start by declaring a new array which will eventually be returned.
+2. In Javascript, there is the concept of "truthiness" and "falsiness". Values such as 0, undefined, null, and false are falsy. Most values are truthy: 1, {}, [], true, etc. In Javascript, the contents of if-statements don't need to be booleans. You can say "if ([1,2,3]) {}", and it's equivalent to saying 'if (true) {}".
+3. Loop over each element in the array. If fn(arr[i]) is truthy, push it to the array.
+
 # FILTER IN JS
 
 In JavaScript, you can filter elements from an array using the `filter()` method. The `filter()` method creates a new array with all elements that pass the condition specified by the provided callback function. Here's how you can use it:
@@ -80,3 +86,36 @@ console.log(newArray); // Output: [1, 3, 5, 7, 9]
 In this example, the `filter()` method is used with an arrow function that checks if the element is not even (i.e., the remainder of dividing the element by 2 is not 0). The new array `newArray` will contain all the elements that meet this condition, which are the odd numbers from the original array.
 
 You can customize the callback function according to your filtering requirements, like filtering out certain strings, objects, or elements based on specific conditions.
+
+# PUSH IN JS
+
+In JavaScript, "push" is a method used to add one or more elements to the end of an array. It is one of the fundamental array manipulation methods. The syntax for the "push" method is as follows:
+
+```javascript
+array.push(element1, element2, ..., elementN);
+```
+
+Here's what each part means:
+
+- `array`: This is the array to which you want to add elements.
+- `element1, element2, ..., elementN`: These are the elements you want to add to the end of the array. You can add one or multiple elements separated by commas.
+
+Example 1: Pushing a single element into an array:
+
+```javascript
+let fruits = ["apple", "banana", "orange"];
+fruits.push("grape");
+
+console.log(fruits); // Output: ['apple', 'banana', 'orange', 'grape']
+```
+
+Example 2: Pushing multiple elements into an array:
+
+```javascript
+let numbers = [1, 2, 3];
+numbers.push(4, 5, 6);
+
+console.log(numbers); // Output: [1, 2, 3, 4, 5, 6]
+```
+
+The "push" method modifies the original array and returns the new length of the array after the elements are added. If you want to add elements to the beginning of an array, you can use the "unshift" method.
