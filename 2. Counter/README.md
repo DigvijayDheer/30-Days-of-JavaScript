@@ -30,7 +30,7 @@ Explanation: counter() initially returns -2. Then increases after each sebsequen
 - `-1000 <= n <= 1000`.
 - `At most 1000 calls to counter() will be made`.
 
-## Hint
+### Hint
 
 1. In JavaScript, a function can return a closure. A closure is defined as a function and the variables declared around it (its lexical environment).
 2. A count variable can be initialized in the outer function and mutated in the inner function. This allows the inner function to "remember" the value of the count across multiple calls.
