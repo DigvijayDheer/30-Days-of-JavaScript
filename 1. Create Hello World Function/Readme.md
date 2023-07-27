@@ -1,10 +1,6 @@
 # Hello World
 
-## Description
-
 Write a function `createHelloWorld`. It should return a new function that always returns `"Hello World"`.
-
-## Examples
 
 ### Example 1
 
@@ -24,7 +20,9 @@ f({}, null, 42); // "Hello World"
 
 ```javascript
 Input: args = [{},null,42]
+
 Output: "Hello World"
+
 Explanation:
 const f = createHelloWorld();
 f({}, null, 42); // "Hello World"
