@@ -35,8 +35,13 @@ Explanation: The function always returns 42.
 ## Constraints:
 
 - `0 <= arr.length <= 1000`
-- `-109 <= arr[i] <= 109`
+- `-10^9 <= arr[i] <= 10^9`
 - `fn returns a number`
+
+### Hint:
+
+1. Start by creating an array that will eventually be returned.
+2. Loop over each element in the passed array. Push fn(arr[i]) to the returned array.
 
 # JAVASCRIPT METHODS FOR TRANSFORMATION
 

@@ -1,1 +1,1 @@
-# JavaScript_Coding_Practice
+# JavaScript Coding Practice
