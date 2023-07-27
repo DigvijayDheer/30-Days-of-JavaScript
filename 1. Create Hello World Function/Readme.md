@@ -1,55 +1,37 @@
-# Hello World Function
+# Hello World
 
 ## Description
 
-The `createHelloWorld` function is designed to return a new function that will always return the string `Hello World`, regardless of the arguments passed to it.
-
-## Signature
-
-```javascript
-function createHelloWorld(): () => string
-```
+Write a function `createHelloWorld`. It should return a new function that always returns `"Hello World"`.
 
 ## Examples
 
 ### Example 1
 
-Input:
-
 ```javascript
-const f = createHelloWorld();
-f();
-```
+Input: args = [{},null,42]
 
-Output:
-
-```javascript
-Hello World
-```
+Output: "Hello World"
 
 Explanation:
+const f = createHelloWorld();
+f({}, null, 42); // "Hello World"
 
-The function returned by `createHelloWorld` should always return the string `Hello World` when invoked.
+// Any arguments could be passed to the function but it should still always return "Hello World".
+```
 
 ### Example 2
 
-Input:
-
 ```javascript
-const f = createHelloWorld();
-f({}, null, 42);
-```
-
-Output:
-
-```javascript
-Hello World
-```
-
+Input: args = [{},null,42]
+Output: "Hello World"
 Explanation:
+const f = createHelloWorld();
+f({}, null, 42); // "Hello World"
 
-Any arguments could be passed to the function, but it should still always return the string `Hello World`.
+// Any arguments could be passed to the function but it should still always return "Hello World".
+```
 
 ## Constraints
 
-- The length of `args` array is in the `range [0, 10]`.
+- `0 <= args.length <= 10`.
