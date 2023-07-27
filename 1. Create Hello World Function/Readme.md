@@ -2,7 +2,7 @@
 
 ## Description
 
-The `createHelloWorld` function is designed to return a new function that will always return the string "Hello World", regardless of the arguments passed to it.
+The `createHelloWorld` function is designed to return a new function that will always return the string `Hello World`, regardless of the arguments passed to it.
 
 ## Signature
 
@@ -28,7 +28,7 @@ f(); // "Hello World"
 
 Explanation:
 
-The function returned by `createHelloWorld` should always return the string "Hello World" when invoked.
+The function returned by `createHelloWorld` should always return the string `Hello World` when invoked.
 
 ### Example 2
 
@@ -46,8 +46,8 @@ f({}, null, 42); // "Hello World"
 
 Explanation:
 
-Any arguments could be passed to the function, but it should still always return the string "Hello World".
+Any arguments could be passed to the function, but it should still always return the string `Hello World`.
 
 ## Constraints
 
-- The length of `args` array is in the range [0, 10].
+- The length of `args` array is in the `range [0, 10]`.
