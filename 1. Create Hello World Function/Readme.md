@@ -13,7 +13,7 @@ Explanation:
 const f = createHelloWorld();
 f({}, null, 42); // "Hello World"
 
-// Any arguments could be passed to the function but it should still always return "Hello World".
+Any arguments could be passed to the function but it should still always return "Hello World".
 ```
 
 ### Example 2
@@ -27,7 +27,7 @@ Explanation:
 const f = createHelloWorld();
 f({}, null, 42); // "Hello World"
 
-// Any arguments could be passed to the function but it should still always return "Hello World".
+Any arguments could be passed to the function but it should still always return "Hello World".
 ```
 
 ## Constraints
