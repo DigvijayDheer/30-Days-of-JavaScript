@@ -18,12 +18,13 @@ Input:
 
 ```javascript
 const f = createHelloWorld();
+f();
 ```
 
 Output:
 
 ```javascript
-f(); // "Hello World"
+Hello World
 ```
 
 Explanation:
@@ -36,12 +37,13 @@ Input:
 
 ```javascript
 const f = createHelloWorld();
+f({}, null, 42);
 ```
 
 Output:
 
 ```javascript
-f({}, null, 42); // "Hello World"
+Hello World
 ```
 
 Explanation:
