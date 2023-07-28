@@ -1,3 +1,14 @@
+/**
+ * The provided code defines a function called createCounter that creates
+ * a counter object with three methods: increment, decrement, and reset.
+ * The counter object maintains a current count, and the methods allow you
+ * to manipulate that count.
+ */
+
+/**===================================================================== */
+// CODE
+/**===================================================================== */
+
 var createCounter = function (init) {
   let currentCount = init;
   return {
@@ -12,4 +23,53 @@ var createCounter = function (init) {
  * counter.increment(); // 6
  * counter.reset(); // 5
  * counter.decrement(); // 4
+ */
+
+/**===================================================================== */
+// SAMPLE TEST CASES
+/**===================================================================== */
+
+// Example 1:
+const counter1 = createCounter(5);
+
+console.log(counter1.increment()); // Output: 6
+console.log(counter1.increment()); // Output: 7
+console.log(counter1.increment()); // Output: 8
+
+console.log(counter1.decrement()); // Output: 7
+console.log(counter1.decrement()); // Output: 6
+
+counter1.reset();
+console.log(counter1.increment()); // Output: 6
+
+// Example 2:
+const counter2 = createCounter(10);
+
+console.log(counter2.increment()); // Output: 11
+console.log(counter2.increment()); // Output: 12
+console.log(counter2.increment()); // Output: 13
+
+console.log(counter2.decrement()); // Output: 12
+
+counter2.reset();
+console.log(counter2.increment()); // Output: 10
+
+// Example 3:
+const counter3 = createCounter(-2);
+
+console.log(counter3.increment()); // Output: -1
+console.log(counter3.increment()); // Output: 0
+
+console.log(counter3.decrement()); // Output: -1
+console.log(counter3.decrement()); // Output: -2
+
+counter3.reset();
+console.log(counter3.increment()); // Output: -2
+
+/**
+ * In each example, we create a new counter object using the createCounter
+ * function and specify the initial count value as an argument. We then call
+ * the increment, decrement, and reset methods to demonstrate the counter's
+ * behavior. The counter starts at the initial value provided and changes
+ * accordingly with each method call.
  */
