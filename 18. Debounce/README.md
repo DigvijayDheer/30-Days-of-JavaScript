@@ -78,3 +78,47 @@ The 3rd call is delayed by 150ms and ran at 450ms. The inputs were (5, 6).
 
 1. You execute code with a delay with "ref = setTimeout(fn, delay)". You can abort the execution of that code with "clearTimeout(ref)"
 2. Whenever you call the function, you should abort any existing scheduled code. Then, you should schedule code to be executed after some delay.
+
+# DEBOUNCE IN JS
+
+In JavaScript, debounce is a technique used to control how often a particular function is executed, especially in response to frequent events such as user input (e.g., keystrokes, mouse movements, or scroll events). The purpose of debouncing is to ensure that the function is only called once after a certain period of inactivity, which can help improve performance and prevent excessive or unnecessary function calls.
+
+Imagine a scenario where you have an event listener attached to an input field, and you want to perform some action whenever the user types something in the field. Without debounce, every keystroke would trigger the event handler function, causing it to be called repeatedly in quick succession, even if the user is still typing. This might lead to performance issues or undesired behavior in some cases.
+
+To address this, you can use the debounce technique to delay the execution of the function until the user pauses typing for a specific duration. Here's a basic implementation of a debounce function in JavaScript:
+
+```javascript
+function debounce(func, delay) {
+  let timerId;
+
+  return function (...args) {
+    clearTimeout(timerId);
+    timerId = setTimeout(() => {
+      func.apply(this, args);
+    }, delay);
+  };
+}
+```
+
+In the debounce function above, we pass two parameters: `func`, which represents the function we want to debounce, and `delay`, which is the time period in milliseconds to wait before actually executing the function.
+
+The debounce function returns a new function that wraps the original `func`. When this new function is called, it first clears any existing timers using `clearTimeout`, then sets a new timer using `setTimeout`. The `setTimeout` function schedules the actual execution of `func` after the specified `delay` has passed since the last call to the new debounced function.
+
+Here's an example of using the debounce function:
+
+```javascript
+// Suppose we have an input field with an event listener for the 'input' event
+const inputField = document.getElementById("myInput");
+
+function handleInput() {
+  console.log("Input value:", inputField.value);
+}
+
+// Debounce the handleInput function to only execute once every 300 milliseconds
+const debouncedHandleInput = debounce(handleInput, 300);
+
+// Attach the debounced function as the event handler
+inputField.addEventListener("input", debouncedHandleInput);
+```
+
+Now, with this implementation, the `handleInput` function will only be called once after the user stops typing for 300 milliseconds, even if they type rapidly within that time period. This can help optimize the performance of applications that handle frequent events.
