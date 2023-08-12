@@ -2,10 +2,13 @@
 
 Write a function `createHelloWorld`. It should return a new function that always returns `"Hello World"`.
 
-### Example 1
+## Example 1
+
+###### Input:
 
 ```javascript
-Input: args = [{},null,42]
+args = [{}, null, 42];
+```
 
 Output: "Hello World"
 
@@ -14,7 +17,8 @@ const f = createHelloWorld();
 f({}, null, 42); // "Hello World"
 
 Any arguments could be passed to the function but it should still always return "Hello World".
-```
+
+````
 
 ### Example 2
 
@@ -28,7 +32,7 @@ const f = createHelloWorld();
 f({}, null, 42); // "Hello World"
 
 Any arguments could be passed to the function but it should still always return "Hello World".
-```
+````
 
 ## Constraints
 
