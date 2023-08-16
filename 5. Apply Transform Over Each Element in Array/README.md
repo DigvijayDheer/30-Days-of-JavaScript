@@ -228,5 +228,6 @@ var map = function (arr, fn) {
 
 The following analysis applies to all of the approaches.
 
-**Time complexity:** O(N)O(N)O(N) where NNN is `arr.length`.
-**Space complexity:** O(N)O(N)O(N) where NNN is `arr.length`. The _**extra**_ space is O(1)O(1)O(1) for Approach 6.
+- **Time complexity:** O(N) where N is `arr.length`.
+
+- **Space complexity:** O(N) where N is `arr.length`. The _**extra**_ space is O(1) for Approach 6.
