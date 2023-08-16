@@ -4,133 +4,96 @@ Write a function `createHelloWorld`. It should return a new function that always
 
 #### Example 1:
 
-###### Input:
-
-```javascript
-args = [{}, null, 42];
 ```
-
-###### Output:
-
-```javascript
-"Hello World";
-```
-
-###### Explanation:
-
-```javascript
-const f = createHelloWorld();
-
+Input: args = [{}, null, 42];
+Output: "Hello World";
+Explanation:
+const  f = createHelloWorld();
 f({}, null, 42); // "Hello World"
 
-// Any arguments could be passed to the function but it should still always return "Hello World".
+Any arguments could be passed to the function but it should still always return "Hello World".
 ```
 
-#### Example 2
+#### Example 2:
 
-###### Input:
-
-```javascript
-args = [{}, null, 42];
 ```
-
-###### Output:
-
-```javascript
-"Hello World";
-```
-
-###### Explanation:
-
-```javascript
-const f = createHelloWorld();
-
+Input: args = [{}, null, 42];
+Output: "Hello World";
+Explanation:
+const  f = createHelloWorld();
 f({}, null, 42); // "Hello World"
 
-// Any arguments could be passed to the function but it should still always return "Hello World".
+Any arguments could be passed to the function but it should still always return "Hello World".
+
 ```
 
-#### Constraints
+#### Constraints:
 
 - `0 <= args.length <= 10`.
 
 # Solution
 
-### Overview
+### Overview:
 
 This question is intended as an introduction to JavaScript functions. This solution will cover their syntax and topics like **_closures_** and **_higher-order functions_**.
 
-> If you are new to JavaScript, it is recommended you follow along with the code examples.
+If you are new to JavaScript, it is recommended you follow along with the code examples.
 
 An awesome thing about JavaScript is your browser has a built-in execution environment. You can read more on how to execute code within your browser (and view a website's code) [here](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools).
 
-### Function Syntax
+### Function Syntax:
 
-> In JavaScript, there are two main ways to declare a function. One of which is to use the `function` keyword.
+In JavaScript, there are two main ways to declare a function. One of which is to use the `function` keyword.
 
 1. #### Basic Syntax:
-
-> The syntax is:
+   The syntax is:
 
 ```javascript
 function f(a, b) {
   const sum = a + b;
-
   return sum;
 }
-
 console.log(f(3, 4)); // 7
 ```
 
 In this example, `f` is the name of the function. `(a, b)` are the arguments. You can write any logic in the body and finally return a `result`. You are allowed to return nothing, and it will instead implicitly return `undefined`.
 
 2. #### Anonymous Function:
-
-> You can optionally exclude the name of the function after the `function` keyword.
+   You can optionally exclude the name of the function after the `function` keyword.
 
 ```javascript
 var f = function (a, b) {
   const sum = a + b;
-
   return sum;
 };
-
 console.log(f(3, 4)); // 7
 ```
 
 3. #### Immediately Invoked Function Expression (IIFE):
-
-> You can create a function and immediately execute it in Javascript.
+   You can create a function and immediately execute it in Javascript.
 
 ```javascript
 const result = (function (a, b) {
   const sum = a + b;
-
   return sum;
 })(3, 4);
-
 console.log(result); // 7
 ```
 
 Why would you write code like this? It gives you the opportunity to **_encapsulate_** a variable within a new **_scope_**. For example, another developer can immediately see that `sum` can't be used anywhere outside the function body.
 
 4. #### Functions Within Functions:
-
-> A powerful feature of JavaScript is you can actually create functions within other functions and even return them!
+   A powerful feature of JavaScript is you can actually create functions within other functions and even return them!
 
 ```javascript
 function createFunction() {
   function f(a, b) {
     const sum = a + b;
-
     return sum;
   }
-
   return f;
 }
-
 const f = createFunction();
-
 console.log(f(3, 4)); // 7
 ```
 
@@ -143,22 +106,18 @@ JavaScript has a feature called **_hoisting_** where a function can sometimes be
 ```javascript
 function createFunction() {
   return f;
-
   function f(a, b) {
     const sum = a + b;
-
     return sum;
   }
 }
-
 const f = createFunction();
-
 console.log(f(3, 4)); // 7
 ```
 
 In this example, the function is returned before it is initialized. Although it is valid syntax, it is sometimes considered bad practice as it can reduce readability.
 
-### Closures
+### Closures:
 
 An important topic in JavaScript is the concept of **_closures_**. When a function is created, it has access to a reference to all the variables declared around it, also known as it's **_lexical environment_**. The combination of the function and its enviroment is called a **_closure_**. This is a powerful and often used feature of the language.
 
@@ -166,21 +125,17 @@ An important topic in JavaScript is the concept of **_closures_**. When a functi
 function createAdder(a) {
   function f(b) {
     const sum = a + b;
-
     return sum;
   }
-
   return f;
 }
-
 const f = createAdder(3);
-
 console.log(f(4)); // 7
 ```
 
 In this example, `createAdder` passes the first parameter `a` and the inner function has access to it. This way, `createAdder` serves as a factory of new functions, with each returned function having different behavior.
 
-### Arrow Syntax
+### Arrow Syntax:
 
 The other common way to declare functions is with arrow syntax. In fact, on many projects, it is the preferred syntax.
 
@@ -200,7 +155,7 @@ In this example, `f` is the name of the function. `(a, b)` are the arguments. Yo
 
 2. #### Omit Return:
 
-> If you can write the code in a single line, you can omit the `return` keyword. This can result in very short code.
+If you can write the code in a single line, you can omit the `return` keyword. This can result in very short code.
 
 ```javascript
 const f = (a, b) => a + b;
@@ -208,9 +163,9 @@ const f = (a, b) => a + b;
 console.log(f(3, 4)); // 7
 ```
 
-### Differences
+### Differences:
 
-> There are 3 major differences between arrow syntax and function syntax.
+There are 3 major differences between arrow syntax and function syntax.
 
 1. More minimalistic syntax. This is especially true for anonymous functions and single-line functions. For this reason, this way is generally preferred when passing short anonymous functions to other functions.
 
@@ -220,13 +175,13 @@ console.log(f(3, 4)); // 7
 
 The choice of arrow syntax versus function syntax is primarily down to preference and your project's stylistic standards.
 
-### Rest Arguments
+### Rest Arguments:
 
 You can use **_rest_** syntax to access all the passed arguments as an array. This isn't necessary for this problem, but it will be a critical concept for many problems. You can read more about `...` syntax [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax).
 
 1. #### Basic Syntax:
 
-> The syntax is:
+The syntax is:
 
 ```javascript
 function f(...args) {
@@ -248,7 +203,7 @@ The primary use-case is for creating generic factory functions that accept any f
 
 By the way, a function that accepts a function and/or returns a function is called a **_higher-order function_**, and they are very common in JavaScript.
 
-> For example, you can create a logged function factory:
+For example, you can create a logged function factory:
 
 ```javascript
 function log(inputFunction) {
