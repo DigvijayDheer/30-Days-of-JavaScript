@@ -212,3 +212,33 @@ function log(inputFunction) {
 const f = log((a, b) => a + b);
 f(1, 2); // Logs: Input [1, 2] Output 3
 ```
+
+### Solutions to Problem
+
+Now let's apply these different ways of writing JavaScript functions to solve this problem.
+
+#### Function Syntax
+
+```javascript
+var createHelloWorld = function () {
+  return function () {
+    return "Hello World";
+  };
+};
+```
+
+#### Arrow Syntax
+
+```javascript
+var createHelloWorld = function () {
+  return () => "Hello World";
+};
+```
+
+#### Arrow Syntax + Rest Arguments
+
+```javascript
+var createHelloWorld = function () {
+  return (...args) => "Hello World";
+};
+```
