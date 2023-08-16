@@ -1,29 +1,7 @@
-/*
- * In JavaScript, you can create a counter using variables and functions.
- * A counter is a simple mechanism that keeps track of a numeric value and
- * allows you to increment or decrement it.
- */
-
-/**
- * The code below is an example of a closure in JavaScript. It creates a
- * function called createCounter that takes an initial value n and returns
- * another function (an inner function) that acts as a counter. Every time
- * the inner function is called, it increments the counter by one and
- * returns the updated value.
- */
-
-/**===================================================================== */
-// CODE
-/**===================================================================== */
-
 var createCounter = (n) => {
   var counter = n;
   return () => counter++;
 };
-
-/**===================================================================== */
-// SAMPLE TEST CASES
-/**===================================================================== */
 
 // Create a counter starting from 5
 var counterFive = createCounter(5);
