@@ -2,7 +2,7 @@
 
 Write a function `createHelloWorld`. It should return a new function that always returns `"Hello World"`.
 
-### Example 1:
+#### Example 1:
 
 ###### Input:
 
@@ -25,7 +25,7 @@ f({}, null, 42); // "Hello World"
 // Any arguments could be passed to the function but it should still always return "Hello World".
 ```
 
-### Example 2
+#### Example 2
 
 ###### Input:
 
@@ -51,8 +51,6 @@ f({}, null, 42); // "Hello World"
 ### Constraints
 
 - `0 <= args.length <= 10`.
-
-#
 
 # Solution
 
