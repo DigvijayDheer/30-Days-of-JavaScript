@@ -1,13 +1,8 @@
 /**
- * The code defines a filter function that takes an array arr and a callback
- * function fn as arguments. The purpose of the filter function is to create
- * a new array containing only the elements from the original array arr for
- * which the callback function fn returns true.
+ * @param {number[]} arr
+ * @param {Function} fn
+ * @return {number[]}
  */
-
-/**===================================================================== */
-// CODE
-/**===================================================================== */
 
 var filter = function (arr, fn) {
   var filteredArr = [];
@@ -19,10 +14,6 @@ var filter = function (arr, fn) {
   }
   return filteredArr;
 };
-
-/**===================================================================== */
-// SAMPLE TEST CASES
-/**===================================================================== */
 
 // Example 1: Filter even numbers
 // Callback function to filter even numbers

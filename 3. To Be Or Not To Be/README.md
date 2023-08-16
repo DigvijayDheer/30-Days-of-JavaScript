@@ -87,9 +87,9 @@ In this example, the `sort()` method sorts the array, the `reverse()` method sub
 
 Within the context of the `expect` function, a restricted form of method chaining enables developers to seamlessly use the `toBe` and `notToBe` methods in a single line, as shown below:
 
-```ruby
+```javascript
 expect(5).toBe(5); // Returns true or throws an error
- expect(5).notToBe(3); // Returns true or throws an error
+expect(5).notToBe(3); // Returns true or throws an error
 ```
 
 The `expect` function returns an object containing the `toBe` and `notToBe` methods. These methods do not return the original object; instead, they either return `true` or throw an error. As such, the `expect` function provides a limited form of method chaining which, nonetheless, proves useful in numerous scenarios.
