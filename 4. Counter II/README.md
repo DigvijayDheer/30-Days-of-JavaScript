@@ -39,13 +39,11 @@ counter.reset(); // 0
 #### Constraints:
 
 - `-1000 <= init <= 1000`
-
 - `total calls not to exceed 1000`
 
 #### Hint:
 
 1. You can return an object with methods.
-
 2. Initialize a variable for currentCount. Inside these methods, add the appropriate logic which mutates currentCount.
 
 ## Solution

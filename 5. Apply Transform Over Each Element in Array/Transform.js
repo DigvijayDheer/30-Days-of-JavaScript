@@ -1,12 +1,8 @@
 /**
- * The code defines a map function that takes an array (arr) and a callback
- * function (fn). It applies the callback function to each element of the
- * array and creates a new array containing the results.
+ * @param {number[]} arr
+ * @param {Function} fn
+ * @return {number[]}
  */
-
-/**===================================================================== */
-// CODE
-/**===================================================================== */
 
 var map = function (arr, fn) {
   var returnedArray = [];
@@ -15,10 +11,6 @@ var map = function (arr, fn) {
   }
   return returnedArray;
 };
-
-/**===================================================================== */
-// SAMPLE TEST CASES
-/**===================================================================== */
 
 // Example 1: Squaring the elements of an array
 function square(num) {
