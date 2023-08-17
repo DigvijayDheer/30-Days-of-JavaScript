@@ -1,12 +1,7 @@
 /**
- * The provided code defines a function called compose that takes an array
- * of functions as input and returns a new function that applies these
- * functions in reverse order to a given argument x.
+ * @param {Function[]} functions
+ * @return {Function}
  */
-
-/**===================================================================== */
-// CODE
-/**===================================================================== */
 
 var compose = function (functions) {
   return function (x) {
@@ -33,10 +28,6 @@ var compose = function (functions) {
  * const fn = compose([x => x + 1, x => 2 * x])
  * fn(4) // 9
  */
-
-/**===================================================================== */
-// SAMPLE TEST CASES
-/**===================================================================== */
 
 // Example 1: Compose two functions
 // Two functions to be composed
@@ -96,9 +87,3 @@ const composedFunction4 = compose([divideByTwo]);
 // Call the composed function with an initial value of 20
 const result4 = composedFunction4(20);
 console.log(result4); // Output: 10 (divideByTwo(20) = 20 / 2 = 10)
-
-/**
- * These examples demonstrate how the compose function can be used to
- * create new functions that apply a series of transformations in reverse
- *  order to a given input value.
- */

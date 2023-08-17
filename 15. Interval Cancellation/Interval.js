@@ -1,14 +1,9 @@
 /**
- * The cancellable function is a higher-order function that takes a function fn,
- * an array of arguments args, and a time interval t. It executes the fn
- * immediately with the given args, and then sets up an interval to repeatedly
- * call the fn with the same args every t milliseconds. It returns a cancel
- * function that can be used to stop the recurring calls.
+ * @param {Function} fn
+ * @param {Array} args
+ * @param {number} t
+ * @return {Function}
  */
-
-/**===================================================================== */
-// CODE
-/**===================================================================== */
 
 var cancellable = function (fn, args, t) {
   fn(...args);
@@ -19,9 +14,36 @@ var cancellable = function (fn, args, t) {
   return cancelFn;
 };
 
-/**===================================================================== */
-// SAMPLE TEST CASES
-/**===================================================================== */
+/**
+ *  const result = []
+ *
+ *  const fn = (x) => x * 2
+ *  const args = [4], t = 20, cancelT = 110
+ *
+ *  const start = performance.now()
+ *
+ *  const log = (...argsArr) => {
+ *      const diff = Math.floor(performance.now() - start)
+ *      result.push({"time": diff, "returned": fn(...argsArr)})
+ *  }
+ *
+ *  const cancel = cancellable(log, args, t);
+ *
+ *  setTimeout(() => {
+ *     cancel()
+ *  }, cancelT)
+ *
+ *  setTimeout(() => {
+ *    console.log(result)  // [
+ *                         //      {"time":0,"returned":8},
+ *                         //      {"time":20,"returned":8},
+ *                         //      {"time":40,"returned":8},
+ *                         //      {"time":60,"returned":8},
+ *                         //      {"time":80,"returned":8},
+ *                         //      {"time":100,"returned":8}
+ *                         //  ]
+ *  }, cancelT + t + 15)
+ */
 
 // Example 1: Log a message every 1 second and cancel after 5 seconds.
 function logMessage(message) {

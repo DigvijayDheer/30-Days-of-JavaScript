@@ -1,6 +1,6 @@
-/**===================================================================== */
-// CODE
-/**===================================================================== */
+/**
+ * @param {number} millis
+ */
 
 async function sleep(millis) {
   const res = await new Promise((resolve, reject) => {
@@ -12,9 +12,10 @@ async function sleep(millis) {
   return res;
 }
 
-/**===================================================================== */
-// SAMPLE TEST CASES
-/**===================================================================== */
+/**
+ * let t = Date.now()
+ * sleep(100).then(() => console.log(Date.now() - t)) // 100
+ */
 
 // Test Case 1. Testing with a small sleep time (10 milliseconds):
 let t1 = Date.now();

@@ -1,16 +1,4 @@
 /**
- * This program defines a TimeLimitedCache class that acts as a cache for storing key-value pairs with a time-based expiration. It uses a Map data structure to store the key-value pairs and associated expiration timers for each key.
- * The TimeLimitedCache class has the following methods:
- * 1. `set(key, value, duration)`: This method sets a new key-value pair in the cache with a specified duration (in milliseconds) until expiration. If the key already exists in the cache, the method will update the existing value and reset the expiration timer. If the key already exists and has not expired, the method will return `false`, indicating that the key was already present. If the key did not exist or had already expired, it will return `true`.
- * 2. `get(key)`: This method retrieves the value associated with a given key from the cache. If the key exists and has not expired, it returns the value. If the key does not exist or has expired, it returns -1.
- * 3. `count()`: This method returns the count of non-expired keys currently present in the cache.
- */
-
-/**===================================================================== */
-// CODE
-/**===================================================================== */
-
-/**
  * TimeLimitedCache constructor function. Creates a new TimeLimitedCache object with an internal Map to store key-value pairs.
  * @constructor
  */
@@ -64,9 +52,13 @@ TimeLimitedCache.prototype.count = function () {
   return this.cache.size;
 };
 
-/**===================================================================== */
-// SAMPLE TEST CASES
-/**===================================================================== */
+/**
+ * Your TimeLimitedCache object will be instantiated and called as such:
+ * var obj = new TimeLimitedCache()
+ * obj.set(1, 42, 1000); // false
+ * obj.get(1) // 42
+ * obj.count() // 1
+ */
 
 // Example 1:
 var obj1 = new TimeLimitedCache();
@@ -90,10 +82,3 @@ setTimeout(() => {
   obj3.get(1); // -1, key 1 has expired, so it returns -1
   obj3.count(); // 0, all keys in the cache have expired
 }, 1200);
-
-/**
- * In these examples, we see how the TimeLimitedCache class behaves when adding
- * new key-value pairs, retrieving values, and counting the number of non-expired
- *  keys. The cache automatically expires keys after the specified duration has
- * passed, and it allows easy management of time-limited data storage.
- */

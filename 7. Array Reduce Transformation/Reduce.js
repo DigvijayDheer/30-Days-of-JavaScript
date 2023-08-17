@@ -1,13 +1,9 @@
 /**
- * The  code defines a reduce function that takes an array of numbers (nums),
- * a callback function (fn), and an initial value (init). It applies the
- * callback function iteratively to each element of the array, accumulating
- * the results and finally returning the reduced value.
+ * @param {number[]} nums
+ * @param {Function} fn
+ * @param {number} init
+ * @return {number}
  */
-
-/**===================================================================== */
-// CODE
-/**===================================================================== */
 
 var reduce = function (nums, fn, init) {
   if (!nums.length) return init;
@@ -19,10 +15,6 @@ var reduce = function (nums, fn, init) {
 
   return res;
 };
-
-/**===================================================================== */
-// SAMPLE TEST CASES
-/**===================================================================== */
 
 // Example 1: Summing up an array of numbers
 const array = [1, 2, 3, 4, 5];
@@ -78,12 +70,3 @@ const counts = reduce(
 
 console.log(counts);
 // Output: { apple: 3, banana: 2, orange: 1 }
-
-/**
- * In each example, the reduce function is used to perform a specific
- * operation on the array elements, effectively reducing the array into
- * a single value or a more complex data structure. The fn parameter is
- * a callback function that defines how the reduction operation should
- * be performed, and the init parameter serves as the initial value of
- * the result.
- */

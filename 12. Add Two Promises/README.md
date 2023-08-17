@@ -2,9 +2,9 @@
 
 Given two promises `promise1` and `promise2`, return a new promise. `promise1` and `promise2` will both resolve with a number. The returned promise should resolve with the sum of the two numbers.
 
-### Example 1:
+#### Example 1:
 
-```javascript
+```
 Input:
 promise1 = new Promise(resolve => setTimeout(() => resolve(2), 20)),
 promise2 = new Promise(resolve => setTimeout(() => resolve(5), 60))
@@ -12,9 +12,9 @@ Output: 7
 Explanation: The two input promises resolve with the values of 2 and 5 respectively. The returned promise should resolve with a value of 2 + 5 = 7. The time the returned promise resolves is not judged for this problem.
 ```
 
-### Example 2:
+#### Example 2:
 
-```javascript
+```
 Input:
 promise1 = new Promise(resolve => setTimeout(() => resolve(10), 50)),
 promise2 = new Promise(resolve => setTimeout(() => resolve(-12), 30))
@@ -22,20 +22,18 @@ Output: -2
 Explanation: The two input promises resolve with the values of 10 and -12 respectively. The returned promise should resolve with a value of 10 + -12 = -2.
 ```
 
-## Constraints:
+#### Constraints:
 
-promise1 and promise2 are promises that resolve with a number
+- `promise1 and promise2 are promises that resolve with a number`
 
-# PROMISES IN JS
+## PROMISES in JavaScript
 
 In JavaScript, promises are a way to handle asynchronous operations. They provide a more elegant and structured way of dealing with asynchronous tasks compared to traditional callback-based approaches. Promises represent a value that may not be available yet but will be resolved at some point, either successfully or with an error.
 
 A promise can be in one of three states:
 
 1. **Pending**: The initial state, representing that the promise is still being processed, and the result is not available yet.
-
 2. **Fulfilled**: The state when the promise has been successfully resolved with a value.
-
 3. **Rejected**: The state when the promise has been rejected with an error.
 
 Here's the basic syntax for creating and using a promise in JavaScript:

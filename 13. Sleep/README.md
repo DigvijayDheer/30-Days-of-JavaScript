@@ -2,9 +2,9 @@
 
 Given a positive integer `millis`, write an asynchronous function that sleeps for `millis` milliseconds. It can resolve any value.
 
-### Example 1:
+#### Example 1:
 
-```javascript
+```
 Input: millis = 100
 Output: 100
 Explanation: It should return a promise that resolves after 100ms.
@@ -14,25 +14,25 @@ console.log(Date.now() - t); // 100
 });
 ```
 
-### Example 2:
+#### Example 2:
 
-```javascript
+```
 Input: millis = 200
 Output: 200
 Explanation: It should return a promise that resolves after 200ms.
 ```
 
-## Constraints:
+#### Constraints:
 
 - `1 <= millis <= 1000`
 
-### Hint:
+#### Hint:
 
 1. In Javascript, you can execute code after some delay with the `setTimeout(fn, sleepTime)` function.
 2. An async function is defined as function which returns a Promise.
 3. To create a Promise, you can code `new Promise((resolve, reject) => {})`. When you want the function to return a value, code resolve(value) inside the callback.
 
-# SETTIMEOUT IN JS
+## setTimeout() in JavaScript
 
 `setTimeout` is a function in JavaScript used to schedule the execution of a function or the evaluation of an expression after a specified delay. It is commonly used to create delays, animations, or to execute code asynchronously without blocking the main thread. The syntax of `setTimeout` is as follows:
 
@@ -50,7 +50,7 @@ Here's how `setTimeout` works:
 2. After the `delay` has elapsed, the specified function is added to the message queue.
 3. When the main thread becomes idle (all synchronous code has been executed), the event loop picks up the function from the message queue and executes it.
 
-Example 1: Simple setTimeout function without arguments:
+**Example 1:** Simple setTimeout function without arguments:
 
 ```javascript
 console.log("Start");
@@ -62,7 +62,7 @@ setTimeout(function () {
 console.log("End");
 ```
 
-Output:
+**Output:**
 
 ```
 Start
@@ -72,7 +72,7 @@ Delayed function executed after 1000ms
 
 In this example, `"Start"` and `"End"` will be printed first, and then the `"Delayed function executed after 1000ms"` message will appear after a 1000ms delay.
 
-Example 2: Using setTimeout with arguments:
+**Example 2:** Using setTimeout with arguments:
 
 ```javascript
 function greet(name) {
@@ -82,7 +82,7 @@ function greet(name) {
 setTimeout(greet, 2000, "John");
 ```
 
-Output:
+**Output:**
 
 ```
 Hello, John!
@@ -90,7 +90,7 @@ Hello, John!
 
 In this example, the `greet` function is executed after a 2000ms delay, and the `"Hello, John!"` message is printed.
 
-Example 3: Cancelling a setTimeout using clearTimeout:
+**Example 3:** Cancelling a setTimeout using clearTimeout:
 
 ```javascript
 function delayedFunction() {
@@ -104,6 +104,6 @@ clearTimeout(timeoutId); // The function won't be executed
 
 In this example, we use `clearTimeout` to cancel the execution of the `delayedFunction`, preventing it from being added to the message queue.
 
-Note: The actual delay before execution may vary slightly depending on the current system load and other factors. The browser or Node.js environment handles the timing for `setTimeout`.
+> **Note:** The actual delay before execution may vary slightly depending on the current system load and other factors. The browser or Node.js environment handles the timing for `setTimeout`.
 
 Keep in mind that `setTimeout` doesn't guarantee the exact time of execution, as it depends on the event loop's availability. For more precise timing, you should consider using `requestAnimationFrame` or other methods depending on your use case.

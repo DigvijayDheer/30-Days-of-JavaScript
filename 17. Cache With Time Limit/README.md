@@ -10,9 +10,9 @@ The class has three public methods:
 
 `count():` returns the count of un-expired keys.
 
-### Example 1:
+#### Example 1:
 
-```js
+```
 Input:
 ["TimeLimitedCache", "set", "get", "count", "get"]
 [[], [1, 42, 100], [1], [], [1]]
@@ -27,9 +27,9 @@ At t=100, key=1 expires.
 At t=150, get(1) is called but -1 is returned because the cache is empty.
 ```
 
-### Example 2:
+#### Example 2:
 
-```js
+```
 Input:
 ["TimeLimitedCache", "set", "set", "get", "get", "get", "count"]
 [[], [1, 42, 50], [1, 50, 100], [1], [1], [1], []]
@@ -46,26 +46,26 @@ At t=200, get(1) is called but the cache is empty so -1 is returned.
 At t=250, count() returns 0 because the cache is empty.
 ```
 
-## Constraints:
+#### Constraints:
 
 - `0 <= key <= 109`
 - `0 <= value <= 109`
 - `0 <= duration <= 1000`
 - `total method calls will not exceed 100`
 
-### Hint:
+#### Hint:
 
 1. You can delay execution of code with "ref = setTimeout(fn, delay)". You can abort the execution with "clearTimeout(ref)"
 2. When storing the values in the cache, also store a reference to the timeout. The timeout should clear the key from the cache after the expiration has elapsed.
 3. When you set a key that already exists, clear the existing timeout.
 
-# Time-based Cache or TTL Cache
+## Time-based Cache or TTL Cache
 
 In JavaScript, caching is a technique used to store data or the results of expensive computations so that they can be retrieved quickly and efficiently when needed again. Cache with time limit (also known as "Time-based Cache" or "TTL Cache") is a specific type of caching where the cached data or computations have an expiration time. Once the expiration time is reached, the cached data is considered stale and will be removed from the cache, ensuring that fresh data is fetched when needed again.
 
 Let's illustrate Cache with Time Limit in JavaScript with a well-explained example:
 
-Example: Caching API Responses with Time Limit
+**Example:** Caching API Responses with Time Limit
 
 Imagine you have a web application that makes API calls to fetch data from a server. To optimize the performance of your application, you want to cache the API responses with a time limit, say 5 minutes. If the same API request is made within the next 5 minutes, you should retrieve the cached response instead of making a new API call. However, if 5 minutes have passed since the last cache, a new API call should be made to get fresh data and update the cache.
 

@@ -1,14 +1,7 @@
 /**
- * The once function is a higher-order function that takes another function (fn)
- * as an argument and returns a new function. The new function will only call
- * the original function (fn) the first time it is invoked, and subsequent
- * invocations will return undefined. This can be useful in scenarios where you
- * want to ensure that a certain function is executed only once.
+ * @param {Function} fn
+ * @return {Function}
  */
-
-/**===================================================================== */
-// CODE
-/**===================================================================== */
 
 var once = function (fn) {
   let called = true;
@@ -30,10 +23,6 @@ var once = function (fn) {
  * onceFn(1,2,3); // 6
  * onceFn(2,3,6); // returns undefined without calling fn
  */
-
-/**===================================================================== */
-// SAMPLE TEST CASES
-/**===================================================================== */
 
 // Example 1: Using once with a simple function
 const sayHello = () => {
@@ -82,9 +71,3 @@ fetchDataOnce().then((data) => {
   console.log(data);
   // Output: The fetched data from the API (since fetchData was called only once)
 });
-
-/**
- * In each of these examples, the once function ensures that the original
- * function is called only once. All subsequent calls to the resulting
- * function return undefined without executing the original function again.
- */

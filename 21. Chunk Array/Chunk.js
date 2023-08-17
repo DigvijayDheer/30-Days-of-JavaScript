@@ -1,6 +1,8 @@
-/**===================================================================== */
-// CODE
-/**===================================================================== */
+/**
+ * @param {Array} arr
+ * @param {number} size
+ * @return {Array[]}
+ */
 
 var chunk = function (arr, size) {
   const chunkArray = [];
@@ -19,10 +21,6 @@ var chunk = function (arr, size) {
 
   return chunkArray;
 };
-
-/**===================================================================== */
-// SAMPLE TEST CASES
-/**===================================================================== */
 
 // Example 1: Splitting an array of numbers into chunks of size 3.
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];

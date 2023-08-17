@@ -1,13 +1,8 @@
 /**
- * To implement the debounce function, we need to keep track of the timer and
- * the last set of inputs. If a new call is made before the timer expires, we
- * need to clear the previous timer and set a new one with the updated inputs.
- * We'll use the setTimeout and clearTimeout functions to achieve this.
+ * @param {Function} fn
+ * @param {number} t milliseconds
+ * @return {Function}
  */
-
-/**===================================================================== */
-// CODE
-/**===================================================================== */
 
 var debounce = function (fn, t) {
   let timerId;
@@ -21,6 +16,13 @@ var debounce = function (fn, t) {
     }, t);
   };
 };
+
+/**
+ * const log = debounce(console.log, 100);
+ * log('Hello'); // cancelled
+ * log('Hello'); // cancelled
+ * log('Hello'); // Logged at t=100ms
+ */
 
 // Test cases
 // let start = Date.now();

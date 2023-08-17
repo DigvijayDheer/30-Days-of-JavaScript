@@ -47,7 +47,7 @@ Explanation: Falsey  values  such  as  0  should  be  filtered  out.
 2. In Javascript, there is the concept of "truthiness" and "falsiness". Values such as 0, undefined, null, and false are falsy. Most values are truthy: 1, {}, [], true, etc. In Javascript, the contents of if-statements don't need to be booleans. You can say "if ([1,2,3]) {}", and it's equivalent to saying 'if (true) {}".
 3. Loop over each element in the array. If fn(arr[i]) is truthy, push it to the array.
 
-## Filter in JavaScript
+## filter() in JavaScript
 
 In JavaScript, you can filter elements from an array using the `filter()` method. The `filter()` method creates a new array with all elements that pass the condition specified by the provided callback function. Here's how you can use it:
 

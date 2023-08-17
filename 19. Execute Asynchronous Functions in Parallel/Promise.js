@@ -1,6 +1,7 @@
-/**===================================================================== */
-// CODE
-/**===================================================================== */
+/**
+ * @param {Array<Function>} functions
+ * @return {Promise<any>}
+ */
 
 var promiseAll = async function (functions) {
   try {
@@ -21,9 +22,10 @@ var promiseAll = async function (functions) {
   }
 };
 
-/**===================================================================== */
-// SAMPLE TEST CASES
-/**===================================================================== */
+/**
+ * const promise = promiseAll([() => new Promise(res => res(42))])
+ * promise.then(console.log); // [42]
+ */
 
 // Example 1: Resolving Multiple Promises
 // Example with multiple promises resolving
@@ -37,13 +39,6 @@ promiseAll(functions4).then((results) => {
   console.log(results); // Output: [10, 20, 30]
 });
 
-/**
- * In this example, we have three functions that return promises. The promises
- * resolve at different intervals (50ms, 100ms, and 200ms), and the promiseAll
- * function waits for all of them to complete. The resolved values are then
- * returned in the order they appear in the original functions array.
- */
-
 // Example 2: Rejection with First Error
 // Example with one promise rejecting and others resolving
 const functions5 = [
@@ -56,13 +51,6 @@ const functions5 = [
 promiseAll(functions5).catch((error) => {
   console.log(error); // Output: "Error 1"
 });
-
-/**
- * In this example, we have three functions again, but the second one rejects
- * with an error after 50ms. The promiseAll function catches the rejection and
- * propagates it, causing the main promise to be rejected with the first
- * encountered error.
- */
 
 // Example 3: Nested Arrays of Functions
 // Example with nested arrays of functions
@@ -81,11 +69,3 @@ const functions6 = [
 promiseAll(functions6).then((results) => {
   console.log(results); // Output: [100, 200, 300, 400, 500]
 });
-
-/**
- * In this example, we have nested arrays of functions, and each inner array
- * is processed concurrently. The inner promises resolve at different intervals,
- *  and the outer array waits for all inner promises to complete. The resolved
- * values are then returned as a single flat array in the order they appear in
- * the original functions array.
- */

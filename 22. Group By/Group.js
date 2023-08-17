@@ -1,6 +1,7 @@
-/**===================================================================== */
-// CODE
-/**===================================================================== */
+/**
+ * @param {Function} fn
+ * @return {Array}
+ */
 
 Array.prototype.groupBy = function (fn) {
   const grouped = {};
@@ -93,18 +94,8 @@ Array.prototype.groupBy = function (fn) {
 };
 
 /**
- * Remember that while these implementations achieve the same goal, their performance
- * and readability can vary. The reduce() method is often considered more concise and
- * functional, while the for loop and forEach() method might be more readable for
- * developers less familiar with functional programming concepts. The Map approach
- * provides benefits like preserving key types and maintaining order, but it involves
- * additional conversion steps. Choose the one that best fits your coding style and
- * project requirements.
+ * [1,2,3].groupBy(String) // {"1":[1],"2":[2],"3":[3]}
  */
-
-/**===================================================================== */
-// SAMPLE TEST CASES
-/**===================================================================== */
 
 // Sample 1
 const array1 = [{ id: "1" }, { id: "1" }, { id: "2" }];

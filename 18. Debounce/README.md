@@ -14,7 +14,7 @@ Please solve it without using lodash's `_.debounce()` function.
 
 ### Example 1:
 
-```js
+```
 Input:
 t = 50
 calls = [
@@ -35,9 +35,9 @@ The 1st call is cancelled by the 2nd call because the 2nd call occurred before 1
 The 2nd call is delayed by 50ms and executed at 125ms. The inputs were (2).
 ```
 
-### Example 2:
+#### Example 2:
 
-```js
+```
 Input:
 t = 20
 calls = [
@@ -50,9 +50,9 @@ The 1st call is delayed until 70ms. The inputs were (1).
 The 2nd call is delayed until 120ms. The inputs were (2).
 ```
 
-### Example 3:
+#### Example 3:
 
-```js
+```
 Input:
 t = 150
 calls = [
@@ -67,19 +67,19 @@ The 2nd call is cancelled by the 3rd call
 The 3rd call is delayed by 150ms and ran at 450ms. The inputs were (5, 6).
 ```
 
-## Constraints:
+#### Constraints:
 
 - `0 <= t <= 1000`
 - `1 <= calls.length <= 10`
 - `0 <= calls[i].t <= 1000`
 - `0 <= calls[i].inputs.length <= 10`
 
-### Hint:
+#### Hint:
 
 1. You execute code with a delay with "ref = setTimeout(fn, delay)". You can abort the execution of that code with "clearTimeout(ref)"
 2. Whenever you call the function, you should abort any existing scheduled code. Then, you should schedule code to be executed after some delay.
 
-# DEBOUNCE IN JS
+## Debouce in JavaScript
 
 In JavaScript, debounce is a technique used to control how often a particular function is executed, especially in response to frequent events such as user input (e.g., keystrokes, mouse movements, or scroll events). The purpose of debouncing is to ensure that the function is only called once after a certain period of inactivity, which can help improve performance and prevent excessive or unnecessary function calls.
 
