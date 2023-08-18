@@ -26,7 +26,7 @@ Learn JS Basics with 30 Qs
 
 12. Add Two Promises
 13. Sleep
-14. Execute Cancellable Function With Delay
+14. Timeout Cancellation
 15. Interval Cancellation
 16. Promise Time Limit
 17. Cache With Time Limit
