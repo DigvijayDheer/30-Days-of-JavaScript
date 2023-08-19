@@ -319,9 +319,9 @@ This code is very similar to the first implementation, but uses traditional prom
 
 #### Complexity Analysis
 
-Time complexity: O(N)O(N)O(N), where NNN is the number of functions passed into `promiseAll()`. This is because `promiseAll()` is essentially waiting for all NNN promises to resolve or reject, so the time complexity is linear in the number of promises. Please note that this doesn't account for the time complexity of the individual functions being run as promises - it focuses on the operation of `promiseAll()` itself.
+Time complexity: O(N), where N is the number of functions passed into `promiseAll()`. This is because `promiseAll()` is essentially waiting for all NNN promises to resolve or reject, so the time complexity is linear in the number of promises. Please note that this doesn't account for the time complexity of the individual functions being run as promises - it focuses on the operation of `promiseAll()` itself.
 
-Space complexity: O(N)O(N)O(N), where NNN is the number of functions passed into `promiseAll()`. The space is primarily used to store the promise results. Just like the time complexity, the space complexity scales linearly with the number of promises.
+Space complexity: O(N), where N is the number of functions passed into `promiseAll()`. The space is primarily used to store the promise results. Just like the time complexity, the space complexity scales linearly with the number of promises.
 
 ## Interview Tips:
 
