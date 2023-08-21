@@ -84,27 +84,27 @@ The following examples shows how you could combine `decades` data with `people` 
 
 ```javascript
 const people = [
-  { name: 'Alice', birthYear: 1990 },
-  { name: 'Bob', birthYear: 1972 },
-  { name: 'Jose', birthYear: 1999 },
-  { name: 'Claudia', birthYear: 1974 },
-  { name: 'Marcos', birthYear: 1995 }
- ];
+  { name: "Alice", birthYear: 1990 },
+  { name: "Bob", birthYear: 1972 },
+  { name: "Jose", birthYear: 1999 },
+  { name: "Claudia", birthYear: 1974 },
+  { name: "Marcos", birthYear: 1995 },
+];
 
- const decades = [
-  { start: 1970, theme: 'Disco',
-  { start: 1980, theme: 'Arcades' },
-  { start: 1990, theme: 'Beanie Babies' }
- ];
+const decades = [
+  { start: 1970, theme: "Disco" },
+  { start: 1980, theme: "Arcades" },
+  { start: 1990, theme: "Beanie Babies" },
+];
 
- const groupedByDecade = list.groupBy((person) => {
+const groupedByDecade = list.groupBy((person) => {
   const decade = Math.floor(person.birthYear / 10) * 10;
   return String(decade);
 });
 
-const decadesWithPeople = decades.map(decadeData => ({
+const decadesWithPeople = decades.map((decadeData) => ({
   ...decadeData,
-  people: groupedByDecade[decadeData.start.toString()] || []
+  people: groupedByDecade[decadeData.start.toString()] || [],
 }));
 
 console.log(decadesWithPeople);
