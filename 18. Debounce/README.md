@@ -1,4 +1,4 @@
-# Debounce
+## Debounce
 
 Given a function `fn` and a time in milliseconds `t`, return a **debounced** version of that function.
 

@@ -1,4 +1,4 @@
-# Memoize
+## Memoize
 
 Given a function `fn`, return a **memoized** version of that function.
 

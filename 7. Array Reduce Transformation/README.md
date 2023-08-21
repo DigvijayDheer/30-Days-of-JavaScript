@@ -1,4 +1,4 @@
-# Array Reduce Transformation
+## Array Reduce Transformation
 
 Given an integer array `nums`, a reducer function `fn`, and an initial value `init`, return a reduced array.
 

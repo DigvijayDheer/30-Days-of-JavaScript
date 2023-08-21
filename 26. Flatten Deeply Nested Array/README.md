@@ -1,4 +1,4 @@
-# Flatten Deeply Nested Array
+## Flatten Deeply Nested Array
 
 Given a **multi-dimensional** array `arr` and a depth `n`, return a **flattened** version of that array.
 

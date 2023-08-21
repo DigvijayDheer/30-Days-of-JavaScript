@@ -1,4 +1,4 @@
-# Allow One Function Call
+## Allow One Function Call
 
 Given a function `fn`, return a new function that is identical to the original function except that it ensures `fn` is called at most once.
 
