@@ -1,4 +1,4 @@
-### Higher Order Functions
+## Higher Order Functions
 
 A higher-order function (HOF) is a function that takes one or more functions as arguments, or returns a function as its result.
 
@@ -42,7 +42,6 @@ Higher-order functions can be used to abstract away repetitive code and make our
 To understand higher-order functions better, let's explore their characteristics and uses:
 
 1.  **Accepting Functions as Arguments**:
-
     A higher-order function can take one or more functions as parameters. These functions are often referred to as "callbacks." By accepting callbacks, a higher-order function can customize its behavior or perform specific actions based on the provided functions.
 
     ```javascript
@@ -63,7 +62,6 @@ To understand higher-order functions better, let's explore their characteristics
     ```
 
 2.  **Returning Functions**:
-
     A higher-order function can also generate and return new functions. This is particularly useful for creating functions with specific behaviors or configurations.
 
     ```javascript
@@ -81,7 +79,6 @@ To understand higher-order functions better, let's explore their characteristics
     ```
 
 3.  **Function Composition**:
-
     Higher-order functions are commonly used for function composition, where multiple functions are combined to create a new function. This allows for building complex operations by chaining simpler functions together.
 
     ```javascript
