@@ -1,4 +1,4 @@
-### Higher Order Functions
+## Higher Order Functions
 
 A higher-order function (HOF) is a function that takes one or more functions as arguments, or returns a function as its result.
 
