@@ -1,18 +1,16 @@
 ## Solution
 
-### Overview
+### Overview:
 
 This question is intended as an introduction to JavaScript functions. This editorial will cover their syntax and topics like _**closures**_ and _**higher-order functions**_.
 
 An awesome thing about JavaScript is your browser has a built-in execution environment. You can read more on how to execute code within your browser (and view a website's code) [here](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools).
 
-#### Function Syntax
+### 1. Function Syntax:
 
 In JavaScript, there are two main ways to declare a function. One of which is to use the `function` keyword.
 
-##### Basic Syntax
-
-The syntax is:
+1.  #### Basic Syntax:
 
 ```javascript
 function f(a, b) {
@@ -24,7 +22,7 @@ console.log(f(3, 4)); // 7
 
 In this example, `f` is the name of the function. `(a, b)` are the arguments. You can write any logic in the body and finally `return` a result. You are allowed to return nothing, and it will instead implicitly return `undefined`.
 
-##### Anonymous Function
+2. #### Anonymous Function:
 
 You can optionally exclude the name of the function after the `function` keyword.
 
@@ -36,7 +34,7 @@ var f = function (a, b) {
 console.log(f(3, 4)); // 7
 ```
 
-##### Immediately Invoked Function Expression (IIFE)
+3. #### Immediately Invoked Function Expression (IIFE):
 
 You can create a function and immediately execute it in Javascript.
 
@@ -50,7 +48,7 @@ console.log(result); // 7
 
 Why would you write code like this? It gives you the opportunity to _**encapsulate**_ a variable within a new _**scope**_. For example, another developer can immediately see that `sum` can't be used anywhere outside the function body.
 
-##### Functions Within Functions
+4. #### Functions Within Functions:
 
 A powerful feature of JavaScript is you can actually create functions within other functions and even return them!
 
@@ -68,7 +66,9 @@ console.log(f(3, 4)); // 7
 
 In this example, `createFunction()` returns a new function. Then that function can be used as normal.
 
-##### Function Hoisting
+---
+
+### Function Hoisting:
 
 JavaScript has a feature called _**hoisting**_ where a function can sometimes be used before it is initialized. You can only do this if you declare functions with the `function` syntax.
 
@@ -86,7 +86,9 @@ console.log(f(3, 4)); // 7
 
 In this example, the function is returned before it is initialized. Although it is valid syntax, it is sometimes considered bad practice as it can reduce readability.
 
-##### Closures
+---
+
+### Closures:
 
 An important topic in JavaScript is the concept of _**closures**_. When a function is created, it has access to a reference to all the variables declared around it, also known as it's _**lexical environment**_. The combination of the function and its enviroment is called a _**closure**_. This is a powerful and often used feature of the language.
 
@@ -104,11 +106,13 @@ console.log(f(4)); // 7
 
 In this example, `createAdder` passes the first parameter `a` and the inner function has access to it. This way, `createAdder` serves as a factory of new functions, with each returned function having different behavior.
 
-#### Arrow Syntax
+---
+
+### 2. Arrow Syntax:
 
 The other common way to declare functions is with arrow syntax. In fact, on many projects, it is the preferred syntax.
 
-##### Basic Syntax
+1. #### Basic Syntax:
 
 ```javascript
 const f = (a, b) => {
@@ -120,7 +124,7 @@ console.log(f(3, 4)); // 7
 
 In this example, `f` is the name of the function. `(a, b)` are the arguments. You can write any logic in the body and finally `return` a result. You are allowed to return nothing, and it will instead implicitly return `undefined`.
 
-##### Omit Return
+2. #### Omit Return:
 
 If you can write the code in a single line, you can omit the `return` keyword. This can result in very short code.
 
@@ -129,21 +133,25 @@ const f = (a, b) => a + b;
 console.log(f(3, 4)); // 7
 ```
 
-##### Differences
+### Differences:
 
 There are 3 major differences between arrow syntax and function syntax.
 
-1.  More minimalistic syntax. This is especially true for anonymous functions and single-line functions. For this reason, this way is generally preferred when passing short anonymous functions to other functions.
-2.  No automatic hoisting. You are only allowed to use the function after it was declared. This is generally considered a good thing for readability.
-3.  Can't be bound to `this`, `super`, and `arguments` or be used as a constructor. These are all complex topics in themselves but the basic takeaway should be that arrow functions are simpler in their feature set. You can read more about these differences [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
+1. More minimalistic syntax. This is especially true for anonymous functions and single-line functions. For this reason, this way is generally preferred when passing short anonymous functions to other functions.
+
+2. No automatic hoisting. You are only allowed to use the function after it was declared. This is generally considered a good thing for readability.
+
+3. Can't be bound to `this`, `super`, and `arguments` or be used as a constructor. These are all complex topics in themselves but the basic takeaway should be that arrow functions are simpler in their feature set. You can read more about these differences [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
 
 The choice of arrow syntax versus function syntax is primarily down to preference and your project's stylistic standards.
 
-#### Rest Arguments
+---
+
+### 3. Rest Arguments:
 
 You can use _**rest**_ syntax to access all the passed arguments as an array. This isn't necessary for this problem, but it will be a critical concept for many problems. You can read more about `...` syntax [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax).
 
-##### Basic Syntax
+1. #### Basic Syntax:
 
 The syntax is:
 
@@ -157,7 +165,7 @@ console.log(f(3, 4)); // 7
 
 In this example the variable `args` is `[3, 4]`.
 
-##### Why
+#### Why?
 
 It may not be immediately obvious why you would use this syntax because you can always just pass an array and get the same result.
 
@@ -186,7 +194,7 @@ f(1, 2); // Logs: Input [1, 2] Output 3
 
 Now let's apply these different ways of writing JavaScript functions to solve this problem.
 
-#### Function Syntax
+#### 1. Function Syntax:
 
 ```javascript
 var createHelloWorld = function () {
@@ -196,7 +204,7 @@ var createHelloWorld = function () {
 };
 ```
 
-#### Arrow Syntax
+#### 2. Arrow Syntax:
 
 ```javascript
 var createHelloWorld = function () {
@@ -204,7 +212,7 @@ var createHelloWorld = function () {
 };
 ```
 
-#### Arrow Syntax + Rest Arguments
+#### 3. Arrow Syntax + Rest Arguments:
 
 ```javascript
 var createHelloWorld = function () {
