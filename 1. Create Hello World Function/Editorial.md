@@ -10,7 +10,7 @@ An awesome thing about JavaScript is your browser has a built-in execution envir
 
 In JavaScript, there are two main ways to declare a function. One of which is to use the `function` keyword.
 
-1.  #### Basic Syntax:
+#### Basic Syntax:
 
 ```javascript
 function f(a, b) {
@@ -22,7 +22,7 @@ console.log(f(3, 4)); // 7
 
 In this example, `f` is the name of the function. `(a, b)` are the arguments. You can write any logic in the body and finally `return` a result. You are allowed to return nothing, and it will instead implicitly return `undefined`.
 
-2. #### Anonymous Function:
+#### Anonymous Function:
 
 You can optionally exclude the name of the function after the `function` keyword.
 
@@ -34,7 +34,7 @@ var f = function (a, b) {
 console.log(f(3, 4)); // 7
 ```
 
-3. #### Immediately Invoked Function Expression (IIFE):
+#### Immediately Invoked Function Expression (IIFE):
 
 You can create a function and immediately execute it in Javascript.
 
@@ -48,7 +48,7 @@ console.log(result); // 7
 
 Why would you write code like this? It gives you the opportunity to _**encapsulate**_ a variable within a new _**scope**_. For example, another developer can immediately see that `sum` can't be used anywhere outside the function body.
 
-4. #### Functions Within Functions:
+#### Functions Within Functions:
 
 A powerful feature of JavaScript is you can actually create functions within other functions and even return them!
 
@@ -65,8 +65,6 @@ console.log(f(3, 4)); // 7
 ```
 
 In this example, `createFunction()` returns a new function. Then that function can be used as normal.
-
----
 
 ### Function Hoisting:
 
@@ -86,8 +84,6 @@ console.log(f(3, 4)); // 7
 
 In this example, the function is returned before it is initialized. Although it is valid syntax, it is sometimes considered bad practice as it can reduce readability.
 
----
-
 ### Closures:
 
 An important topic in JavaScript is the concept of _**closures**_. When a function is created, it has access to a reference to all the variables declared around it, also known as it's _**lexical environment**_. The combination of the function and its enviroment is called a _**closure**_. This is a powerful and often used feature of the language.
@@ -106,13 +102,11 @@ console.log(f(4)); // 7
 
 In this example, `createAdder` passes the first parameter `a` and the inner function has access to it. This way, `createAdder` serves as a factory of new functions, with each returned function having different behavior.
 
----
-
 ### 2. Arrow Syntax:
 
 The other common way to declare functions is with arrow syntax. In fact, on many projects, it is the preferred syntax.
 
-1. #### Basic Syntax:
+#### Basic Syntax:
 
 ```javascript
 const f = (a, b) => {
@@ -124,7 +118,7 @@ console.log(f(3, 4)); // 7
 
 In this example, `f` is the name of the function. `(a, b)` are the arguments. You can write any logic in the body and finally `return` a result. You are allowed to return nothing, and it will instead implicitly return `undefined`.
 
-2. #### Omit Return:
+#### Omit Return:
 
 If you can write the code in a single line, you can omit the `return` keyword. This can result in very short code.
 
@@ -145,13 +139,11 @@ There are 3 major differences between arrow syntax and function syntax.
 
 The choice of arrow syntax versus function syntax is primarily down to preference and your project's stylistic standards.
 
----
-
 ### 3. Rest Arguments:
 
 You can use _**rest**_ syntax to access all the passed arguments as an array. This isn't necessary for this problem, but it will be a critical concept for many problems. You can read more about `...` syntax [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax).
 
-1. #### Basic Syntax:
+#### Basic Syntax:
 
 The syntax is:
 
@@ -165,7 +157,7 @@ console.log(f(3, 4)); // 7
 
 In this example the variable `args` is `[3, 4]`.
 
-#### Why?
+##### Why?
 
 It may not be immediately obvious why you would use this syntax because you can always just pass an array and get the same result.
 
@@ -187,8 +179,6 @@ function log(inputFunction) {
 const f = log((a, b) => a + b);
 f(1, 2); // Logs: Input [1, 2] Output 3
 ```
-
----
 
 ### Solutions to Problem
 
